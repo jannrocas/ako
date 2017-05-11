@@ -1,0 +1,47 @@
+{
+  "name": "ako",
+  "version": "1.0.0",
+  "description": "personal website of JannRocas",
+  "main": "server.js",
+  "scripts": {
+    "start": "yarn run build && babel-node src/server.js",
+    "start:dev": "export NODE_ENV=development && yarn run build:dev && nodemon --exec babel-node -- src/server.js",
+    "start:universal": "export UNIVERSAL=true && yarn run start",
+    "start:dev:universal": "export NODE_ENV=development && export UNIVERSAL=true && yarn run start:dev",
+    "build": "NODE_ENV=production webpack -p",
+    "build:dev": "webpack -p",
+    "build:dev:watch": "webpack -d --watch"
+  },
+  "repository": "https://github.com/jannrocas/ako",
+  "author": "Jann Peter Rocas",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "semantic-ui-react": "^0.68.3"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.0.0",
+    "babel-register": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^5.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "file-loader": "^0.11.1",
+    "nodemon": "^1.11.0",
+    "semantic-ui": "^2.2.10",
+    "shipit-deploy": "^2.4.0",
+    "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.5.1"
+  }
+}
