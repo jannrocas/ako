@@ -4,13 +4,15 @@
   "description": "personal website of JannRocas",
   "main": "server.js",
   "scripts": {
-    "start": "yarn run build && babel-node src/server.js",
+    "start": "yarn run build && nodemon src/server.js --exec babel-node",
     "start:dev": "export NODE_ENV=development && yarn run build:dev && nodemon --exec babel-node -- src/server.js",
     "start:universal": "export UNIVERSAL=true && yarn run start",
     "start:dev:universal": "export NODE_ENV=development && export UNIVERSAL=true && yarn run start:dev",
-    "build": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production webpack -p && yarn run build:babel",
+    "build:babel": "babel src -d dist --copy-files",
     "build:dev": "webpack -p",
-    "build:dev:watch": "webpack -d --watch"
+    "build:dev:watch": "webpack -d --watch",
+    "serve": "node dist/server.js"
   },
   "repository": "https://github.com/jannrocas/ako",
   "author": "Jann Peter Rocas",

@@ -4,15 +4,15 @@ module.exports = function (shipit) {
 	shipit.initConfig({
 		default: {
 			workspace: '/tmp/ako',
-			deployTo: '/usr/src/ako',
+			deployTo: '~/serv/ako',
 			repositoryUrl: 'https://github.com/jannrocas/ako.git',
 			ignores: ['.git', 'node_modules'],
-			keepReleases: 3,
+			keepReleases: 5,
 			key: '~/.ssh/id_rsa',
 			branch: 'master',
 		},
 		staging: {
-			servers: 'deploy@jannrocas.com'
+			servers: 'lazyci@jannrocas.com'
 		}
 	});
 };
