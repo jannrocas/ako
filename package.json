@@ -27,7 +27,8 @@
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
-    "semantic-ui-react": "^0.68.3"
+    "semantic-ui-react": "^0.68.3",
+    "win-node-env": "^0.1.0"
   },
   "devDependencies": {
     "babel-loader": "^7.0.0",
@@ -40,7 +41,7 @@
     "eslint-plugin-react": "^7.0.0",
     "file-loader": "^0.11.1",
     "nodemon": "^1.11.0",
-    "semantic-ui": "^2.2.10",
+    "semantic-ui": "^2.3.0",
     "shipit-deploy": "^2.4.0",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
